@@ -124,7 +124,7 @@ class Science_Chemistry_PDBFile {
         $header_re = "/^HEADER[[:space:]]+(([^[:space:]]+ )+)[[:space:]]+";
         $header_re .= "([0-9]{2}-[A-Z]{3}-[0-9]{2,4})[[:space:]]+[A-Z0-9]{4}/";
 
-        if (preg_match($header_re, $arr[0], &$regs)) {
+        if (preg_match($header_re, $arr[0], $regs)) {
             $this->class = trim($regs[1]);
             // put date in a more standard format
             $tmp = explode("-", $regs[3]);
@@ -164,7 +164,7 @@ class Science_Chemistry_PDBFile {
             // the flag
             if ($rectype == "ENDMDL") {
                 $this->macromolecules[] = new Science_Chemistry_Macromolecule_PDB($this->pdb, 
-                                                $tmparr, &$this);
+                                                $tmparr, $this);
                 $this->num_macromolecules++;
                 $flag = "endmodel";
                 $tmparr = array();
@@ -173,8 +173,8 @@ class Science_Chemistry_PDBFile {
         // if we got to the end without hitting a MODEL ... ENDMDL pair
         // add the only macromolecule in this file to the array
         if ($flag == "nomodel") {
-            $this->macromolecules[] = new Science_Chemistry_Macromolecule_PDB(&$this->pdb, 
-                                            &$tmparr, &$this);
+            $this->macromolecules[] = new Science_Chemistry_Macromolecule_PDB($this->pdb, 
+                                            $tmparr, $this);
             $this->num_macromolecules++;
         }
 	}

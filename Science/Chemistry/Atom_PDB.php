@@ -158,10 +158,12 @@ class Science_Chemistry_Atom_PDB extends Science_Chemistry_Atom {
     var $parent_residue;
 
     
-    function Science_Chemistry_Atom_PDB($atomrec, $residue="") {
+    function Science_Chemistry_Atom_PDB(&$atomrec, &$residue="") {
         // reference to containing residue
-        if (!empty($residue))
-            $this->parent_residue =& $residue;
+        if (!empty($residue)) {
+            $this->parent_residue = $residue;
+        }
+
         // process PDB atom record
         // no error checking, assumes correct and standard record
         $this->VALID = true;

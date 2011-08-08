@@ -45,8 +45,8 @@ class Science_Chemistry_Macromolecule_PDB extends Science_Chemistry_Macromolecul
      * @see     parseResidues()
      */
     function Science_Chemistry_Macromolecule_PDB($pdb, $records, $pdbfile="") {
-        $this->pdb =& $pdb;
-        $this->pdbfile =& $pdbfile;
+        $this->pdb = $pdb;
+        $this->pdbfile = $pdbfile;
         $this->parseResidues($records);
     }
 
@@ -71,8 +71,8 @@ class Science_Chemistry_Macromolecule_PDB extends Science_Chemistry_Macromolecul
         }
 
          foreach ($res_atoms as $mol_id => $atoms_list) {
-            $this->molecules[] =& new Science_Chemistry_Residue_PDB(&$this->pdb, 
-                                            &$atoms_list, &$this);
+            $this->molecules[] =& new Science_Chemistry_Residue_PDB($this->pdb, 
+                                            $atoms_list, $this);
             $this->num_molecules++;
         }
         return true;

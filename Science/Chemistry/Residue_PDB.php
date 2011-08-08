@@ -95,8 +95,10 @@ class Science_Chemistry_Residue_PDB extends Science_Chemistry_Molecule {
      * @access  public
      */
     function Science_Chemistry_Residue_PDB($pdb, $atomrec_arr, $macromol="") {
-        for ($i=0; $i < count($atomrec_arr); $i++)
-            $this->atoms[] = new Science_Chemistry_Atom_PDB(&$atomrec_arr[$i], &$this);
+        for ($i=0; $i < count($atomrec_arr); $i++) {
+            $this->atoms[] = new Science_Chemistry_Atom_PDB($atomrec_arr[$i], $this);
+        }
+
         if (!empty($this->atoms)) {
             $this->VALID = true;
             $this->macromol =& $macromol;
