@@ -1,5 +1,5 @@
 <?php
-require_once "PHPUnit/Framework.php";
+require_once "PHPUnit/Framework/TestCase.php";
 require_once "Science/Chemistry.php";
 require_once "Science/Chemistry/Molecule_XYZ.php";
 require_once "Science/Chemistry/Macromolecule.php";
