@@ -1,5 +1,5 @@
 <?php
-require_once "PHPUnit/Framework.php";
+require_once "PHPUnit/Framework/TestCase.php";
 require_once "Science/Chemistry/PDBFile.php";
 
 class Science_Chemistry_PDBFileTest extends PHPUnit_Framework_TestCase {
