@@ -110,7 +110,7 @@ class Science_Chemistry_PDBParser {
         $header_re = "/^HEADER[[:space:]]+(([^[:space:]]+ )+)[[:space:]]+";
         $header_re .= "([0-9]{2}-[A-Z]{3}-[0-9]{2,4})[[:space:]]+[A-Z0-9]{4}/";
 
-        if (preg_match($header_re, $arr[0], &$regs)) {
+        if (preg_match($header_re, $arr[0], $regs)) {
             $this->class = trim($regs[1]);
             // put date in a more standard format
             $tmp = explode("-", $regs[3]);
@@ -136,7 +136,7 @@ class Science_Chemistry_PDBParser {
             // of a model, if so, end parsing altogether
             if ($rectype == "ENDMDL") {
                 if ($multi) {
-                    $this->macromolecules[] = $this->parseResidues(&$tmparr, $full);
+                    $this->macromolecules[] = $this->parseResidues($tmparr, $full);
                     $this->num_macromolecules++; // = count($this->macromolecules);
                     $tmparr = array();
                 } else {
@@ -152,7 +152,7 @@ class Science_Chemistry_PDBParser {
                 $this->meta[$rectype][] = $arr[$i];
 		}
         if (!empty($tmparr)) {
-            $this->macromolecules[] = $this->parseResidues(&$tmparr, $full);
+            $this->macromolecules[] = $this->parseResidues($tmparr, $full);
             $this->num_macromolecules++; // = count($this->macromolecules);
         }
 	}
@@ -190,7 +190,7 @@ class Science_Chemistry_PDBParser {
                 ) {
                 if (!empty($res_atoms)) {
                     for ($j=0; $j < count($res_atoms); $j++) {
-                        $temp = $this->parseAtom($res_atoms[$j], $full, &$atomname);
+                        $temp = $this->parseAtom($res_atoms[$j], $full, $atomname);
                         $residues[$curr_res_id][$atomname] = $temp;
                     }
                 }
@@ -208,7 +208,7 @@ class Science_Chemistry_PDBParser {
      * @param   boolean $full   whether to store the full set of fields per atom
      * @see     parseResidues()
      */
-    function parseAtom($atomrec, $full, &$atomname) {
+    function parseAtom($atomrec, $full, $atomname) {
         $atom = array();
         // process PDB atom record
         // no error checking, assumes correct and standard record
