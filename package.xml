@@ -47,7 +47,6 @@ Fixed undefined constant bugs
    <file baseinstalldir="/" md5sum="6c696f01291a7f59c6cf3b885ca05f5d" name="Science/Chemistry/Periodic_Table.php" role="php" />
    <file baseinstalldir="/" md5sum="a11d456b5c70d0295926b40be09dcd14" name="Science/Chemistry/Residue_PDB.php" role="php" />
    <file baseinstalldir="/" md5sum="238b18d85d4124a3f9e7348201870475" name="tests/1hca.pdb" role="test" />
-   <file baseinstalldir="/" md5sum="39636c7e57aae85ff8e0b669337f5029" name="tests/AllTests.php" role="test" />
    <file baseinstalldir="/" md5sum="882cecdf6ba0d9ce7d24b0a4fc6b9982" name="tests/his.pdb" role="test" />
    <file baseinstalldir="/" md5sum="25670ca3d81af6927c8c9d1b7e937612" name="tests/his.xyz" role="test" />
    <file baseinstalldir="/" md5sum="433614f6361f7342886f5a759f47ab4a" name="tests/lys.pdb" role="test" />
