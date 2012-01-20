@@ -1,3 +1,6 @@
+- Redo the object model and inheritance
+- Make goot PHPUnit tests
+
 * toCML methods DONE
 * residue class DONE
 * macromolecule class DONE
