@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>Science_Chemistry</name>
  <channel>pear.php.net</channel>
  <summary>Classes to manipulate chemical objects: atoms, molecules, etc.</summary>
@@ -13,10 +13,10 @@ information on the Elements in the Periodic Table.</description>
   <email>jmcastagnetto@php.net</email>
   <active>yes</active>
  </lead>
- <date>2010-10-04</date>
- <time>23:24:02</time>
+ <date>2012-04-10</date>
+ <time>01:31:40</time>
  <version>
-  <release>1.1.1</release>
+  <release>1.1.2</release>
   <api>1.1.0</api>
  </version>
  <stability>
@@ -26,39 +26,38 @@ information on the Elements in the Periodic Table.</description>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
 QA release
-Bug #895 PEAR QA: improvement for get_class()-usage 	jmcastagnetto
-Bug #4493 forgotten $this-&gt; 	jmcastagnetto
-Added PHPUnit test coverage (fragile)
-Fixed undefined constant bugs
+Remove call time pass by references -- fatal in PHP 5.4.
+Bug #12264 Warnings &amp; notices
+PHPUnit 3.6+ compatibility
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <file baseinstalldir="/" md5sum="b53156e4d38b7484c491dc777eadb687" name="Science/Chemistry.php" role="php" />
-   <file baseinstalldir="/" md5sum="67d0b6433236025e7e21826b051af63b" name="Science/Chemistry/Atom.php" role="php" />
-   <file baseinstalldir="/" md5sum="d708ed9c82f7160c2ddab8e20743f959" name="Science/Chemistry/Atom_PDB.php" role="php" />
-   <file baseinstalldir="/" md5sum="affaf89d7790016a13204e4d9d8acdac" name="Science/Chemistry/Coordinates.php" role="php" />
-   <file baseinstalldir="/" md5sum="d82e30c2dfd590f9d2f1a5ef147f7fd1" name="Science/Chemistry/Element.php" role="php" />
-   <file baseinstalldir="/" md5sum="7ce021dbde3aca3ed34bc3470e127ca3" name="Science/Chemistry/Macromolecule.php" role="php" />
-   <file baseinstalldir="/" md5sum="194a57637903ad62f7e36142824cf528" name="Science/Chemistry/Macromolecule_PDB.php" role="php" />
-   <file baseinstalldir="/" md5sum="d7bf73cda807f94338c4b8a8cf0949f4" name="Science/Chemistry/Molecule.php" role="php" />
-   <file baseinstalldir="/" md5sum="9060012adb8da7389cdaf018aca26dd0" name="Science/Chemistry/Molecule_XYZ.php" role="php" />
-   <file baseinstalldir="/" md5sum="c8d9ec79b0798f9ad99e68f973105a95" name="Science/Chemistry/PDBFile.php" role="php" />
-   <file baseinstalldir="/" md5sum="f91134d30d3c63ec7d62e8359107a841" name="Science/Chemistry/PDBParser.php" role="php" />
-   <file baseinstalldir="/" md5sum="6c696f01291a7f59c6cf3b885ca05f5d" name="Science/Chemistry/Periodic_Table.php" role="php" />
-   <file baseinstalldir="/" md5sum="a11d456b5c70d0295926b40be09dcd14" name="Science/Chemistry/Residue_PDB.php" role="php" />
+   <file baseinstalldir="/" md5sum="e0550fe1006ce9d64f775f7b68d7010c" name="Science/Chemistry.php" role="php" />
+   <file baseinstalldir="/" md5sum="961cc05f08a41fa3cb5190502257b8fd" name="Science/Chemistry/Atom.php" role="php" />
+   <file baseinstalldir="/" md5sum="6f647225a79bd3a3d8a54e4fc578fecf" name="Science/Chemistry/Atom_PDB.php" role="php" />
+   <file baseinstalldir="/" md5sum="9a7029e3de40fca80776a49e8a9c085a" name="Science/Chemistry/Coordinates.php" role="php" />
+   <file baseinstalldir="/" md5sum="7a736a92c72b82b887e68d73ec873fc2" name="Science/Chemistry/Element.php" role="php" />
+   <file baseinstalldir="/" md5sum="790448ad45d5c10f2e4ddc49f4cda603" name="Science/Chemistry/Macromolecule.php" role="php" />
+   <file baseinstalldir="/" md5sum="315a078e67a0d57579c1eec4af36d4c8" name="Science/Chemistry/Macromolecule_PDB.php" role="php" />
+   <file baseinstalldir="/" md5sum="dae7827bd5831c08921acf412aa06314" name="Science/Chemistry/Molecule.php" role="php" />
+   <file baseinstalldir="/" md5sum="8c891524f77b481b1299716d500a176e" name="Science/Chemistry/Molecule_XYZ.php" role="php" />
+   <file baseinstalldir="/" md5sum="3bac8b0f919f779f5542dc2d76df8382" name="Science/Chemistry/PDBFile.php" role="php" />
+   <file baseinstalldir="/" md5sum="d2f38a7f43ff10fcdeea350cc821119d" name="Science/Chemistry/PDBParser.php" role="php" />
+   <file baseinstalldir="/" md5sum="3a6cddebacccf93ff8b79cbcd9bf9f78" name="Science/Chemistry/Periodic_Table.php" role="php" />
+   <file baseinstalldir="/" md5sum="cae53ca2666a43128cdac054e4f25905" name="Science/Chemistry/Residue_PDB.php" role="php" />
    <file baseinstalldir="/" md5sum="238b18d85d4124a3f9e7348201870475" name="tests/1hca.pdb" role="test" />
    <file baseinstalldir="/" md5sum="882cecdf6ba0d9ce7d24b0a4fc6b9982" name="tests/his.pdb" role="test" />
    <file baseinstalldir="/" md5sum="25670ca3d81af6927c8c9d1b7e937612" name="tests/his.xyz" role="test" />
    <file baseinstalldir="/" md5sum="433614f6361f7342886f5a759f47ab4a" name="tests/lys.pdb" role="test" />
    <file baseinstalldir="/" md5sum="9be1b1bf79bbe625dc26dd6a789f9e99" name="tests/lys.xyz" role="test" />
    <file baseinstalldir="/" md5sum="2e51840b04ca27c6f37a7320e2dc5928" name="tests/pdb2xyz.php" role="test" />
-   <file baseinstalldir="/" md5sum="35781ca78b7c8bf5f8d42179674d5c6b" name="tests/Science_ChemistryTest.php" role="test" />
-   <file baseinstalldir="/" md5sum="2b0c30fcea023c2e8828724941b4c11a" name="tests/Science_Chemistry_PDBFileTest.php" role="test" />
+   <file baseinstalldir="/" md5sum="0c1dd763297ebd15ca35f49e0006dbbb" name="tests/Science_ChemistryTest.php" role="test" />
+   <file baseinstalldir="/" md5sum="5c6986b0cc441491ce15924f124a90af" name="tests/Science_Chemistry_PDBFileTest.php" role="test" />
    <file baseinstalldir="/" md5sum="e418f504d86d4f3f67e7f897a655906e" name="tests/small.pdb" role="test" />
    <file baseinstalldir="/" md5sum="63386d4e5fa298b25ea8f25bf06b94e5" name="tests/water.cml" role="test" />
-   <file baseinstalldir="/" md5sum="4d08817a118dd4677aeeb8f9c7a41598" name="tests/xyz2cml.php" role="test" />
-   <file baseinstalldir="/" md5sum="9cb2b8101724c93a92d2f7b44e4fa88e" name="README" role="data" />
-   <file baseinstalldir="/" md5sum="0855b1a3b2520754d7ee0a15b23e1b0f" name="TODO" role="data" />
+   <file baseinstalldir="/" md5sum="323c9739c5299835fcac1cde876d7bde" name="tests/xyz2cml.php" role="test" />
+   <file baseinstalldir="/" md5sum="2bb632ff950ebbad4dc08c3bb45fa88c" name="README.md" role="data" />
+   <file baseinstalldir="/" md5sum="228e01aa8216787fc59f6ed740e1393b" name="TODO" role="data" />
   </dir>
  </contents>
  <dependencies>
@@ -172,6 +171,24 @@ Bug #895 PEAR QA: improvement for get_class()-usage 	jmcastagnetto
 Bug #4493 forgotten $this-&gt; 	jmcastagnetto
 Added PHPUnit test coverage (fragile)
 Fixed undefined constant bugs
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.1.2</release>
+    <api>1.1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2012-04-10</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+QA release
+Remove call time pass by references -- fatal in PHP 5.4.
+Bug #12264 Warnings &amp; notices
+PHPUnit 3.6+ compatibility
    </notes>
   </release>
  </changelog>
