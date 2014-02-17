@@ -8,7 +8,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Science_Chemistry": "./"
+            "Science": "./"
         }
     },
     "description": "General classes to represent Atoms, Molecules and Macromolecules, including parsing code for PDB, CML and XYZ file formats.",
