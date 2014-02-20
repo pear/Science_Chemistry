@@ -1,0 +1,31 @@
+{
+    "authors": [
+        {
+            "email": "jmcastagnetto@php.net",
+            "name": "Jesus M. Castagnetto",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Science": "./"
+        }
+    },
+    "description": "General classes to represent Atoms, Molecules and Macromolecules, including parsing code for PDB, CML and XYZ file formats.",
+    "include-path": [
+        "./"
+    ],
+    "license": "PHP License",
+    "name": "pear/science_chemistry",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Science_Chemistry",
+        "source": "https://github.com/pear/Science_Chemistry"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
